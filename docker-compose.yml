@@ -2,13 +2,13 @@ version: "3.9"
 
 services:
   clonebot:
-    image: ghcr.io/missemily2022/clonebot:new
+    image: kerensekali/clonebot:latest
     container_name: clonebot
     environment:
       - telegram_token=${telegram_token}
       - user_ids=${user_ids}
       - group_ids=${group_ids}
-      - PORT=${PORT}
+      - PORT=8080
     ports:
-      - ${PORT}:${PORT}
+      - 8080:8080
     restart: unless-stopped
