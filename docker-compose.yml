@@ -10,5 +10,5 @@ services:
       - group_ids=${group_ids}
       - PORT=${PORT}
     ports:
-      - ${PORT}:${PORT}
+      - ${PORT}:clonebot:${PORT}
     restart: unless-stopped
