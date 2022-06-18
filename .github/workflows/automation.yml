@@ -19,4 +19,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: jodiekurnia/clone:latest, jodiekurnia/clone:${{ github.run_number }}
+          tags: jodiekurnia/clonebot:latest, jodiekurnia/clonebot:${{ github.run_number }}
