@@ -9,10 +9,14 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
-      - name: Publish to Docker Hub
-        uses: docker/build-push-action@v2
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: jodiekurnia/cloneBot_heroku
-          tags: latest, ${{ github.run_number }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      -
+        name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          tags: jodiekurnia/clone:latest, jodiekurnia/clone:${{ github.run_number }}
