@@ -63,7 +63,7 @@ class MySaveFileThread(threading.Thread):
                 '--ignore-existing',
                 '--drive-random-pick-sa',
                 '--drive-rolling-sa',
-                '--drive-rolling-count=1'
+                '--drive-rolling-count=8'
             ]
             if config.GCLONE_PARA_OVERRIDE:
                 command_line.extend(config.GCLONE_PARA_OVERRIDE)
