@@ -57,7 +57,7 @@ class MySaveFileThread(threading.Thread):
                 config.PATH_TO_GCLONE,
                 'copy',
                 '--drive-server-side-across-configs',
-                '-P',
+                '--progress',
                 '--stats',
                 '1s',
                 '--ignore-existing',
