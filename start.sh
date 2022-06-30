@@ -1,4 +1,4 @@
-FILE=telegram_gcloner/config.ini
+FILE=./telegram_gcloner/config.ini
 if [ ! -f "$FILE" ]; then
     echo "[General]
     path_to_gclone = ./gclone
