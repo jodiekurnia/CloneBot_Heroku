@@ -60,7 +60,7 @@ class MySaveFileThread(threading.Thread):
                 '--progress',
                 '--stats',
                 '1s',
-                '--ignore-existing',
+                '--size-only',
                 '--drive-random-pick-sa',
                 '--drive-rolling-sa',
                 '--drive-rolling-count=8'
